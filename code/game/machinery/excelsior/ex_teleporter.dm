@@ -420,11 +420,13 @@ var/global/excelsior_last_draft = 0
 	if(world.time < (excelsior_last_draft + reinforcements_delay))
 		return FALSE
 	if(excelsior_conscripts <= 0)
-
-// BL
+		return FALSE
+	if(excelsior_energy < reinforcements_cost)
+		return FALSE
+	return TRUE
 
 /obj/machinery/complant_teleporter/admin
-	name = "Bluespace League long-range teleporter"
+	name = "Bluespace League long-range general teleporter"
 	idle_power_usage = 1
 	active_power_usage = 1
 	shipside_only = FALSE
@@ -445,7 +447,16 @@ var/global/excelsior_last_draft = 0
 		/obj/item/stock_parts/scanning_module/excelsior = 1,
 		/obj/item/stock_parts/manipulator/excelsior = 1,
 		/obj/item/stock_parts/micro_laser/excelsior = 1,
-		/obj/item/stock_parts/matter_bin/excelsior = 1,
+		/obj/item/stock_parts/matter_bin/excelsior = 1
+		)
+	IKEA_list = list()
+	entropy_value = 0
+	max_energy = 10000
+	energy_gain = 10000
+
+/obj/machinery/complant_teleporter/admin/gear
+	name = "Bluespace League long-range munitions teleporter"
+	parts_list = list(
 		/obj/item/storage/deferred/crate/excel_conscript = 1,
 		/obj/item/storage/deferred/crate/excel_shock_kit = 1,
 		/obj/item/storage/deferred/crate/excel_eva = 1,
@@ -456,17 +467,44 @@ var/global/excelsior_last_draft = 0
 		/obj/item/storage/deferred/crate/shotgun = 1,
 		/obj/item/storage/deferred/crate/ak = 1,
 		/obj/item/storage/deferred/crate/uniform_flak = 1,
-		/obj/item/storage/deferred/rations = 1,
-		/obj/item/storage/firstaid/regular = 1,
-		/obj/item/reagent_containers/food/snacks/shokoloud = 1,
-		/obj/item/reagent_containers/food/snacks/mre/can = 1,
-		/obj/item/reagent_containers/food/snacks/liquidfood = 1
+		/obj/item/storage/deferred/crate/uniform_light = 1,
+		/obj/item/storage/deferred/crate/uniform_green = 1,
+		/obj/item/storage/deferred/crate/uniform_brown = 1,
+		/obj/item/storage/deferred/crate/uniform_black = 1,
+		/obj/item/storage/deferred/crate/antiarmor = 1,
+		/obj/item/storage/deferred/crate/kovacs = 1
 		)
-	IKEA_list = list()
-	entropy_value = 0
-	max_energy = 10000
-	energy_gain = 10000
-		return FALSE
-	if(excelsior_energy < reinforcements_cost)
-		return FALSE
-	return TRUE
+
+/obj/machinery/complant_teleporter/admin/food
+	name = "Bluespace League long-range ration teleporter"
+	parts_list = list(
+		/obj/item/storage/deferred/rations = 1,
+		/obj/item/reagent_containers/food/snacks/mre/can = 1,
+		/obj/item/reagent_containers/food/snacks/mre = 1,
+		/obj/item/reagent_containers/food/snacks/mre_cracker = 1,
+		/obj/item/reagent_containers/food/snacks/mre_paste = 1,
+		/obj/item/reagent_containers/food/snacks/liquidfood = 1,
+		/obj/item/reagent_containers/food/snacks/sosjerky = 1,
+		/obj/item/reagent_containers/food/snacks/chips = 1,
+		/obj/item/reagent_containers/food/snacks/cheesiehonkers = 1,
+		/obj/item/reagent_containers/food/snacks/tastybread = 1,
+		/obj/item/reagent_containers/food/snacks/shokoloud = 1,
+		/obj/item/reagent_containers/food/snacks/wok = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/small/ale = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/small/beer = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/cola = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/space_up = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/space_mountain_wind = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/whiskey = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/wine = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/rum = 1,
+		/obj/item/reagent_containers/food/drinks/cans/cola = 1,
+		/obj/item/reagent_containers/food/drinks/cans/dr_gibb = 1,
+		/obj/item/reagent_containers/food/drinks/cans/grape_juice = 1,
+		/obj/item/reagent_containers/food/drinks/cans/iced_tea = 1,
+		/obj/item/reagent_containers/food/drinks/cans/lemon_lime = 1,
+		/obj/item/reagent_containers/food/drinks/cans/space_mountain_wind = 1,
+		/obj/item/reagent_containers/food/drinks/cans/space_up = 1,
+		/obj/item/reagent_containers/food/drinks/cans/starkist = 1,
+		/obj/item/reagent_containers/food/drinks/cans/waterbottle = 1
+		)
