@@ -420,6 +420,52 @@ var/global/excelsior_last_draft = 0
 	if(world.time < (excelsior_last_draft + reinforcements_delay))
 		return FALSE
 	if(excelsior_conscripts <= 0)
+
+// BL
+
+/obj/machinery/complant_teleporter/admin
+	name = "Bluespace League long-range teleporter"
+	idle_power_usage = 1
+	active_power_usage = 1
+	shipside_only = FALSE
+	materials_list = list(
+		MATERIAL_STEEL = list("amount" = 120, "price" = 1),
+		MATERIAL_WOOD = list("amount" = 120, "price" = 1),
+		MATERIAL_PLASTIC = list("amount" = 120, "price" = 1),
+		MATERIAL_GLASS = list("amount" = 120, "price" = 1),
+		MATERIAL_SILVER = list("amount" = 120, "price" = 1),
+		MATERIAL_PLASTEEL = list("amount" = 120, "price" = 1),
+		MATERIAL_GOLD = list("amount" = 120, "price" = 1),
+		MATERIAL_URANIUM = list("amount" = 120, "price" = 1),
+		MATERIAL_DIAMOND = list("amount" = 120, "price" = 1)
+		)
+	parts_list = list(
+		/obj/item/spacecash/bundle/c1000 = 1,
+		/obj/item/stock_parts/capacitor/excelsior = 1,
+		/obj/item/stock_parts/scanning_module/excelsior = 1,
+		/obj/item/stock_parts/manipulator/excelsior = 1,
+		/obj/item/stock_parts/micro_laser/excelsior = 1,
+		/obj/item/stock_parts/matter_bin/excelsior = 1,
+		/obj/item/storage/deferred/crate/excel_conscript = 1,
+		/obj/item/storage/deferred/crate/excel_shock_kit = 1,
+		/obj/item/storage/deferred/crate/excel_eva = 1,
+		/obj/item/storage/deferred/crate/excel_spetsnaz = 1,
+		/obj/item/storage/deferred/crate/excel_heavy = 1,
+		/obj/item/storage/deferred/crate/sidearm = 1,
+		/obj/item/storage/deferred/crate/specialists_sidearm = 1,
+		/obj/item/storage/deferred/crate/shotgun = 1,
+		/obj/item/storage/deferred/crate/ak = 1,
+		/obj/item/storage/deferred/crate/uniform_flak = 1,
+		/obj/item/storage/deferred/rations = 1,
+		/obj/item/storage/firstaid/regular = 1,
+		/obj/item/reagent_containers/food/snacks/shokoloud = 1,
+		/obj/item/reagent_containers/food/snacks/mre/can = 1,
+		/obj/item/reagent_containers/food/snacks/liquidfood = 1
+		)
+	IKEA_list = list()
+	entropy_value = 0
+	max_energy = 10000
+	energy_gain = 10000
 		return FALSE
 	if(excelsior_energy < reinforcements_cost)
 		return FALSE
