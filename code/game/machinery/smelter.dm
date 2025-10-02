@@ -117,7 +117,7 @@
 			if(!(material in stored_material))
 				stored_material[material] = 0
 
-			stored_material[material] += materials[material]
+			stored_material[material] * scrap_multiplier += materials[material]
 
 	for(var/obj/O in smelting.contents)
 		smelt_item(O)
@@ -136,7 +136,7 @@
 			if(!(material in stored_material))
 				stored_material[material] = 0
 
-			stored_material[material] += materials[material]
+			stored_material[material] * scrap_multiplier += materials[material]
 
 	for(var/obj/O in smelting.contents)
 		smelt_scrap(O)
