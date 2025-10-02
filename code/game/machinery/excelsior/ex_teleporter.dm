@@ -508,3 +508,25 @@ var/global/excelsior_last_draft = 0
 		/obj/item/reagent_containers/food/drinks/cans/starkist = 1,
 		/obj/item/reagent_containers/food/drinks/cans/waterbottle = 1
 		)
+
+/obj/machinery/complant_teleporter/admin/medicine
+	name = "Bluespace League long-range medicine teleporter"
+	parts_list = list(
+		/obj/item/storage/firstaid/regular = 1,
+		/obj/item/storage/firstaid/fire = 1,
+		/obj/item/storage/firstaid/toxin = 1,
+		/obj/item/storage/firstaid/o2 = 1,
+		/obj/item/storage/firstaid/adv = 1,
+		/obj/item/storage/firstaid/combat = 1,
+		/obj/item/stack/medical/bruise_pack = 1,
+		/obj/item/stack/medical/advanced/bruise_pack = 1,
+		/obj/item/stack/medical/ointment = 1,
+		/obj/item/stack/medical/advanced/ointment = 1,
+		/obj/item/stack/medical/splint = 1,
+		/obj/item/reagent_containers/hypospray/autoinjector/bloodrestore = 1,
+		/obj/item/reagent_containers/hypospray/autoinjector/quickhealbrute = 1,
+		/obj/item/reagent_containers/hypospray/autoinjector/quickhealburn = 1,
+		/obj/item/reagent_containers/hypospray/autoinjector/antitoxin = 1,
+		/obj/item/reagent_containers/hypospray/autoinjector/dexalinplus = 1,
+		/obj/item/reagent_containers/hypospray/autoinjector/tramadol = 1
+		)
