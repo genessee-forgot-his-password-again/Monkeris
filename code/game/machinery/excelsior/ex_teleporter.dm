@@ -472,17 +472,20 @@ var/global/excelsior_last_draft = 0
 		/obj/item/storage/deferred/crate/uniform_brown = 1,
 		/obj/item/storage/deferred/crate/uniform_black = 1,
 		/obj/item/storage/deferred/crate/antiarmor = 1,
-		/obj/item/storage/deferred/crate/kovacs = 1
+		/obj/item/storage/deferred/crate/kovacs = 1,
+		/obj/item/computer_hardware/hard_drive/portable/design/excelsior/weapons = 1
 		)
 
 /obj/machinery/complant_teleporter/admin/food
 	name = "Bluespace League long-range ration teleporter"
 	parts_list = list(
 		/obj/item/storage/deferred/rations = 1,
+		/obj/item/storage/ration_pack = 1,
 		/obj/item/reagent_containers/food/snacks/mre/can = 1,
 		/obj/item/reagent_containers/food/snacks/mre = 1,
 		/obj/item/reagent_containers/food/snacks/mre_cracker = 1,
 		/obj/item/reagent_containers/food/snacks/mre_paste = 1,
+		/obj/item/reagent_containers/food/snacks/candy/mre = 1,
 		/obj/item/reagent_containers/food/snacks/liquidfood = 1,
 		/obj/item/reagent_containers/food/snacks/sosjerky = 1,
 		/obj/item/reagent_containers/food/snacks/chips = 1,
@@ -490,6 +493,9 @@ var/global/excelsior_last_draft = 0
 		/obj/item/reagent_containers/food/snacks/tastybread = 1,
 		/obj/item/reagent_containers/food/snacks/shokoloud = 1,
 		/obj/item/reagent_containers/food/snacks/wok = 1,
+		/obj/item/storage/box/donut = 1,
+		/obj/item/storage/case/donut = 1,
+		/obj/item/storage/deferred/crate/alcohol = 1,
 		/obj/item/reagent_containers/food/drinks/bottle/small/ale = 1,
 		/obj/item/reagent_containers/food/drinks/bottle/small/beer = 1,
 		/obj/item/reagent_containers/food/drinks/bottle/cola = 1,
