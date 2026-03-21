@@ -470,7 +470,8 @@
 		MATERIAL_PLATINUM,
 		MATERIAL_PLASTEEL,
 		MATERIAL_DIAMOND,
-		MATERIAL_PLASMAGLASS)
+		MATERIAL_PLASMAGLASS,
+		MATERIAL_BIOMATTER)
 	var/list/materials_stored = list()
 	var/datum/weakref/lastprime
 	var/locked = FALSE
